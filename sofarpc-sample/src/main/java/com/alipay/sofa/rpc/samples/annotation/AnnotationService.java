@@ -22,6 +22,6 @@ package com.alipay.sofa.rpc.samples.annotation;
  */
 public interface AnnotationService {
 
-    String sayAnnotation(String stirng);
+    String sayAnnotation(String string);
 
 }
