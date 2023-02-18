@@ -18,21 +18,19 @@ package com.alipay.sofa.rpc.samples.annotation;
 
 import com.alipay.sofa.runtime.api.annotation.SofaReference;
 import com.alipay.sofa.runtime.api.annotation.SofaReferenceBinding;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 /**
  * @author <a href="mailto:leizhiyuan@gmail.com">leizhiyuan</a>
  */
-@Component
+@Service
 public class AnnotationClientImpl {
 
-    @SofaReference(interfaceType = AnnotationService.class, jvmFirst = false, binding = @SofaReferenceBinding(bindingType = "bolt"))
+    @SofaReference(interfaceType = AnnotationService.class, jvmFirst = false,
+            binding = @SofaReferenceBinding(bindingType = "bolt"))
     private AnnotationService annotationService;
 
     public String sayClientAnnotation(String str) {
-
-        String result = annotationService.sayAnnotation(str);
-
-        return result;
+        return annotationService.sayAnnotation(str);
     }
 }

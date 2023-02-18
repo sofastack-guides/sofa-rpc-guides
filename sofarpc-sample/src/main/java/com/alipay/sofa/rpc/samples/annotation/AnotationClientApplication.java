@@ -27,7 +27,6 @@ import org.springframework.context.ApplicationContext;
 public class AnotationClientApplication {
 
     public static void main(String[] args) {
-
         //change port to run in local machine
         System.setProperty("server.port", "8081");
 
@@ -38,7 +37,6 @@ public class AnotationClientApplication {
 
         AnnotationClientImpl annotationService = applicationContext
             .getBean(AnnotationClientImpl.class);
-
         String result = annotationService.sayClientAnnotation("annotation");
         System.out.println("invoke result:" + result);
 
